@@ -1,0 +1,38 @@
+.multiBtnDiv{
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideBtnDiv{
+  position: absolute;
+  top: 200px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px black solid;
+}
+
+.signupBtn {
+  right: -15.0rem;
+
+}
+  
+  .multiBtn {
+    display: inline-block;
+    color: whitesmoke;
+    background-color: var(--light-green);
+    border: none;
+    box-shadow: 0.2px 1px 5px 0.2px rgb(105, 167, 131);
+  }
+
+  .multiBtn:hover {
+    background-color: #177730;
+    color: whitesmoke;
+  }
+  
+  .multiBtn:focus {
+    background-color: #177730;
+    color: whitesmoke;
+  }

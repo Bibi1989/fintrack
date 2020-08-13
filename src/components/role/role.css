@@ -1,0 +1,19 @@
+.form-control {
+  height: 35px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.shadow {
+  border-radius: 10px;
+  height: 60vh;
+  width: 30vw;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+label {
+  font-size: 15px;
+}

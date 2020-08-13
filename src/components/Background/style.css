@@ -1,0 +1,27 @@
+.side-background {
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.side-background img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.side-background .background-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 5%;
+}
+
+.side-background .background-text img {
+  width: 55%;
+  padding-bottom: 1em;
+}
+.side-background .background-text p {
+  color: #ffffff;
+  width: 300px;
+  font-size: 1.3em;
+}

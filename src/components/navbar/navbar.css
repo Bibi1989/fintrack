@@ -1,0 +1,39 @@
+.navWrapper{
+    display: flex;
+    justify-content: space-between;
+    border: 1px black solid;
+    flex: 1 1 70%; 
+    padding: 0.5rem 5rem 0.5rem 5rem;
+    background-color: white;
+    height: fit-content;
+}
+
+.roundedNavDiv{
+    display: flex;
+}
+
+
+.roundedIcons {
+    border: 1px black solid;
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: red;
+    border-radius: 50%;
+
+}
+
+.navLinks{
+    display: flex;
+    border: 1px black solid;
+    justify-content: space-between;
+    width: 40%;    
+    list-style-type: none;
+    
+}
+
+.navLinks> li> a{
+    font-weight: 600;
+    font-size: 1.3rem;
+    /* text-align: center; */
+
+}

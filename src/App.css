@@ -1,0 +1,193 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  --antd-wave-shadow-color: #34a853 !important;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+  border: 1px black solid;
+  background-color: #f5f5f5;
+}
+
+:root {
+  --light-green: #34a853;
+  --dark-green: #177730;
+  --dark-blue: #27283f;
+}
+
+.new-wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.loginFormChild {
+  padding: 0px 80px;
+  position: absolute;
+  top: 45%;
+  transform: translate(0, -50%);
+  max-width: 765px;
+  width: 50%;
+}
+
+.form-comp {
+  flex: 1 1 50%;
+  background-color: #f2f6fa;
+  border: 1px black solid;
+}
+
+.bckgrnd-comp {
+  flex: 1 1 50%;
+  /* background-color: var(--light-green); */
+}
+
+.headerPadding {
+  padding-bottom: 23px;
+  margin: 0 auto;
+}
+.ant-input-affix-wrapper {
+  border-color: var(--light-green) !important;
+  outline-color: var(--light-green) !important;
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: var(--dark-green) !important;
+  outline-color: var(--dark-green) !important;
+  box-shadow: 0.2px 0.1px 10px rgba(186, 252, 202, 0.61) !important;
+}
+.ant-input-affix-wrapper:hover {
+  border-color: var(--dark-green) !important;
+  outline-color: var(--dark-green) !important;
+}
+/* 
+.ant-btn span{
+} */
+
+.ant-btn:hover {
+
+  color: white !important;
+  border-color: var(--light-green) !important;
+}
+
+.ant-btn:active{
+  
+  color: var(--dark-green) !important;
+  border-color: var(--light-green) !important;
+}
+.ant-btn-primary {
+  color: #fff;
+  background: var(--light-green) !important;
+  
+}
+
+.ant-input-affix-wrapper, .uploadInput, .ant-btn{
+    border-color: var(--light-green) !important;
+    outline-color: var(--light-green) !important;
+  }
+
+   .ant-input-affix-wrapper:hover,  .uploadInput:hover, .ant-btn:hover {
+    border-color: var(--dark-green) !important;
+    outline-color: var(--dark-green) !important;
+  }
+
+  .sideBtn {
+      margin-bottom:2rem;
+      height: 7rem;
+      padding-top: 5px;
+      display: flex;
+      width: 100%;
+     
+  }
+  .sideBtnDiv {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;   
+
+  }
+  .sideBtn a, .sideBtnDiv a{
+    margin: 0rem 1.7rem 0rem 1.7rem;
+    color: var(--dark-green);
+    font-weight: 500;
+    font-size: 1.4rem;
+    
+  }
+
+.sideBtn a:hover,
+.sideBtnDiv a:hover {
+  background-color: var(--light-green);
+  padding: 1px 0px 12px 0px;
+  border-radius: 3px;
+  box-shadow: 0.2px 1px 5px 0.2px rgb(105, 167, 131);
+  color: whitesmoke;
+}
+
+  .sideBtn a:active, .sideBtnDiv a:active {
+    background-color: var(--dark-green);
+    border: none;
+    box-shadow: 0.2px 1px 5px 0.2px rgb(105, 167, 131);
+    color: whitesmoke
+  }
+  /* .ant-input:hover {
+    border-right-width: 1px !important;
+} */
+
+/* i have to fix the shadow*/
+
+.ant-form-item-control-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  /* box-shadow: 0.2px 1px 5px 0.2px rgb(105, 167, 131); */
+}
+  .ant-form-item-has-error .ant-form-item-explain, .ant-form-item-has-error .ant-form-item-split {
+    color: rgb(238, 83, 83) !important;
+}
+
+.anticon svg {
+  color: green;
+}
+@media only screen and (max-width: 790px) {
+  .first {
+    padding-bottom: 0px;
+  }
+  .formItems {
+    padding-bottom: 0px;
+  }
+
+  .loginFormChild {
+    padding: 0px 2rem;
+  }
+
+  .sideBtnDiv {
+    width: 100%;
+  }
+  .sideBtn a {
+    margin-left: 3.5rem;
+  }
+}
+
+/* @media only screen and (max-width: 723px) {
+    .first{
+      padding-bottom: 0px;
+    }
+    .formItems {
+      padding-bottom: 0px;
+    }
+    .loginFormChild {
+      padding: 0px 0px;
+    }
+  } */
