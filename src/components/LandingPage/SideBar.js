@@ -20,8 +20,8 @@ const SideBar = ({ match }) => {
   const [inc, setInc] = useState(0);
   useEffect(() => {
     setState({
-      dashboard: params.includes("dashboard"),
-      request: params === "request",
+      dashboard: params === "/dashboard",
+      request: params.includes("dashboard/request"),
       department: params.includes("dashboard/department"),
       roles: params.includes("dashboard/roles"),
       settings: params === "settings",
@@ -51,7 +51,7 @@ const SideBar = ({ match }) => {
           </div>
           <div className='sideBarDiv__field'>
             <Link
-              to='/dashboard'
+              to='/dashboard/request'
               className={`link ${state.request && "active"}`}
               onClick={() => handleActive()}
             >
