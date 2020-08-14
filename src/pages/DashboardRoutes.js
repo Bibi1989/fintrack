@@ -8,7 +8,7 @@ import DepartmentIndex from "../components/Department/DepartmentIndex";
 import RequestIndex from "../components/Department/Requests/RequestIndex";
 import UserDashBoard from "../components/LandingPage/UserDashBoard";
 import DashBoard from "../components/LandingPage/DashBoard";
-import Request from "../components/Request/RequestIndex";
+// import Request from "../components/Request/RequestIndex";
 
 const DashboardRoutes = () => {
   const path = useRouteMatch().path;
@@ -19,7 +19,7 @@ const DashboardRoutes = () => {
         <Route path={`${path}/user`} component={UserDashBoard} />
         <Route path={`${path}/roles`} component={RoleIndex} />
         <Route path={`${path}/department`} component={DepartmentIndex} />
-        <Route path={`${path}/request`} component={Request} />
+        <Route path={`${path}/request`} component={RequestIndex} />
       </Switch>
     </RouteStyle>
   );

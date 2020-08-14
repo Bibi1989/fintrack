@@ -1,7 +1,12 @@
 import React from "react";
+import Request from "../../Request/Request";
 
 function RequestIndex() {
-  return <div></div>;
+  return (
+    <div>
+      <Request />
+    </div>
+  );
 }
 
 export default RequestIndex;
