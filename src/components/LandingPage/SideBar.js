@@ -7,7 +7,9 @@ import Navbar from "../navbar/Navbar";
 import DashboardRoutes from "../../pages/DashboardRoutes";
 
 const SideBar = ({ match }) => {
-  const params = useLocation().pathname.split("/").slice(-1).join("");
+  // const params = useLocation().pathname.split("/").slice(-1).join("");
+  const params = useLocation().pathname;
+  console.log(useLocation());
   const [state, setState] = useState({
     dashboard: false,
     request: false,
@@ -18,10 +20,10 @@ const SideBar = ({ match }) => {
   const [inc, setInc] = useState(0);
   useEffect(() => {
     setState({
-      dashboard: params === "dashboard",
+      dashboard: params.includes("dashboard"),
       request: params === "request",
-      department: params === "department",
-      roles: params === "roles",
+      department: params.includes("dashboard/department"),
+      roles: params.includes("dashboard/roles"),
       settings: params === "settings",
     });
 
