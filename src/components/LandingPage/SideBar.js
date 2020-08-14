@@ -24,7 +24,7 @@ const SideBar = ({ match }) => {
       request: params.includes("dashboard/request"),
       department: params.includes("dashboard/department"),
       roles: params.includes("dashboard/roles"),
-      settings: params === "settings",
+      settings: params.includes("dashboard/setting"),
     });
 
     // eslint-disable-next-line
@@ -81,7 +81,7 @@ const SideBar = ({ match }) => {
           </div>
           <div className='sideBarDiv__field'>
             <Link
-              to='/dashboard'
+              to='/dashboard/setting'
               className={`link ${state.settings && "active"}`}
               onClick={() => handleActive()}
             >
