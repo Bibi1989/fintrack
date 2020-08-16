@@ -7,16 +7,9 @@ import {
   PlusSpan,
   PInvite,
   PLight,
-  PBold,
   DivAvatar,
   FlexInvite,
   Ul,
-  Li,
-  ListProfile,
-  ListName,
-  ListDate,
-  ShowMenu,
-  Flex,
 } from "./style";
 import { Button } from "../CreateDepartment/style";
 import { Avatar } from "../ViewDepartments/Card";
@@ -24,6 +17,7 @@ import { useParams, useHistory } from "react-router-dom";
 
 import { data, singleLists } from "../datas/data";
 import { useState } from "react";
+import List from "./List";
 
 const SingleDepartmentView = () => {
   const [show, setShow] = useState();
@@ -72,42 +66,12 @@ const SingleDepartmentView = () => {
       <Row direction='column'>
         <Ul>
           {singleLists.map((list) => (
-            <Flex id='1' key={list.id} onClick={() => handleClick(list)}>
-              <Li>
-                <ListProfile>
-                  <Avatar size='1em'>
-                    {list.name.split(" ")[0][0].toUpperCase() +
-                      list.name.split(" ")[1][0].toUpperCase()}
-                  </Avatar>
-                  <ListName>
-                    <PBold>{list.name}</PBold>
-                    <PInvite>{list.title}</PInvite>
-                  </ListName>
-                </ListProfile>
-                <ListDate>Date Joined {list.date}</ListDate>
-              </Li>
-              <ShowMenu className={show === list.id && "show"}>
-                <Button
-                  style={{ marginRight: "3em" }}
-                  onClick={() =>
-                    history.push(`/dashboard/department/staff/${list.id}`)
-                  }
-                >
-                  View Staff
-                </Button>
-                <PInvite
-                  style={{ marginRight: "3em" }}
-                  onClick={() =>
-                    history.push(
-                      `/dashboard/department/update/staff/${list.id}`
-                    )
-                  }
-                >
-                  Edit
-                </PInvite>
-                <PInvite>Remove</PInvite>
-              </ShowMenu>
-            </Flex>
+            <List
+              key={list.id}
+              list={list}
+              handleClick={handleClick}
+              show={show}
+            />
           ))}
         </Ul>
       </Row>

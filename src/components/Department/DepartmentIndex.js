@@ -16,6 +16,7 @@ import ModifyStaff from "./ModifyStaff";
 
 const DepartmentIndex = () => {
   const { path } = useRouteMatch();
+  console.log({ dept: path });
   return (
     <div>
       <Switch>

@@ -4,6 +4,7 @@ import Request from "./Request";
 
 const RequestIndex = () => {
   const path = useRouteMatch();
+  console.log({ req: path });
   return (
     <Switch>
       <Route exact path={`${path}`} component={Request} />

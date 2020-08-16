@@ -38,6 +38,7 @@ export const PlusSpan = styled.span`
 export const PInvite = styled.p`
   font-size: 1.1em;
   cursor: pointer;
+
   :hover {
     color: #7befb2;
   }
@@ -48,7 +49,6 @@ export const PLight = styled.p`
 `;
 export const PBold = styled.p`
   font-size: 1.1em;
-  padding-bottom: 0.5em;
   font-weight: bold;
 `;
 export const Ul = styled.ul`
@@ -58,21 +58,22 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  align-items: center;
 `;
 export const ListProfile = styled.div`
+  width: 50%;
   display: flex;
   align-items: center;
 `;
-export const ListName = styled.div`
-  padding-left: 2em;
+export const DivProfile = styled.div`
+  width: 100%;
 `;
+export const ListName = styled.div``;
 export const ListDate = styled.div`
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 0.8em;
 `;
 export const Flex = styled.div`
-  cursor: pointer;
+  margin-bottom: 1em;
 `;
 export const ShowMenu = styled.div`
   padding: 1em 0;
