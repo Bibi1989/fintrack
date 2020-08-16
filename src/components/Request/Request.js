@@ -5,15 +5,11 @@ import { Menu, Dropdown } from "antd";
 import { progresses, summaryLists, requests, claims } from "./data";
 
 const Request = () => {
-  const [title, setTitle] = useState("Request");
+  const [toggle, setToggle] = useState(true);
   const menus = (
     <Menu>
-      <Menu.Item key='0' onClick={() => setTitle("Request")}>
-        Request
-      </Menu.Item>
-      <Menu.Item key='1' onClick={() => setTitle("Claims")}>
-        Claims
-      </Menu.Item>
+      <Menu.Item key='0'>Request</Menu.Item>
+      <Menu.Item key='1'>Claims</Menu.Item>
     </Menu>
   );
 
@@ -23,8 +19,12 @@ const Request = () => {
       <RequestStyle>
         <HeaderRow>
           <HeaderTitle>
-            <h1>{title}</h1>
-            <i className='fas fa-sort'></i>
+            <h1>{toggle ? "Request" : "Claims"}</h1>
+            <i
+              className='fas fa-sliders-h'
+              onClick={() => setToggle(!toggle)}
+              style={{ fontSize: "25px", cursor: "pointer" }}
+            ></i>
           </HeaderTitle>
           <Dropdown
             overlay={menus}
@@ -47,7 +47,7 @@ const Request = () => {
           </Dropdown>
         </HeaderRow>
 
-        {title === "Request" ? (
+        {toggle ? (
           <ListRow>
             <ListHeader>
               <p className='bold'>Subject and Category</p>
