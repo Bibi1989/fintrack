@@ -18,13 +18,13 @@ const DashboardRoutes = () => {
   return (
     <RouteStyle>
       <Switch>
-        <Route exact path={`${path}`} component={DashBoard} />
+        <Route exact path={`${path}`} component={DashboardTwo} />
         <Route path={`${path}/user`} component={UserDashBoard} />
         <Route path={`${path}/roles`} component={RoleIndex} />
         <Route path={`${path}/department`} component={DepartmentIndex} />
         <Route path={`${path}/request`} component={Request} />
         <Route path={`${path}/setting`} component={SettingIndex} />
-        <Route path={`${path}/my`} component={DashboardTwo} />
+        <Route path={`${path}/my`} component={DashBoard} />
       </Switch>
     </RouteStyle>
   );
